@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-// Health check (public)
-Route::get('/health', function () {
+// Status check (public)
+Route::get('/status', function () {
     return response()->json([
         'success' => true,
         'message' => 'OK',
         'version' => 'v1',
     ]);
-})->name('health');
+})->name('status');
