@@ -12,6 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
         then: function () {
+            // Central API V1 routes
             Route::middleware('api')
                 ->prefix('api/v1')
                 ->name('api.v1.')
